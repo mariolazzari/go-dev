@@ -19,3 +19,6 @@ A package is a collection of go files that share the same import path. This file
 - letters and numbers only
 - no starting numebrs
 - declared at the top of file
+
+### Files and directories
+

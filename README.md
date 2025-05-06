@@ -22,3 +22,15 @@ A package is a collection of go files that share the same import path. This file
 
 ### Files and directories
 
+- singularly focused
+- lowecase and _
+- clean and simple to use
+
+### Dependency management
+
+```sh
+go mod init demo
+go get github.com/gobuffalo/flect
+```
+
+Go sum file will be generated: ```go go get -u``` will update module.

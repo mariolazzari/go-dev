@@ -34,3 +34,14 @@ go get github.com/gobuffalo/flect
 ```
 
 Go sum file will be generated: ```go go get -u``` will update module.
+
+## Basics
+
+### Numbers
+
+- Signed
+- Unsigned
+
+### Strings
+
+

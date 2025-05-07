@@ -86,3 +86,7 @@ func main() {
 - conventional
 - very short
 - Uppercase: public
+
+### Printing & formatting
+
+- fmt package [docs](https://pkg.go.dev/fmt)

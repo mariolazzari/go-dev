@@ -71,4 +71,7 @@ func main() {
 }
 ```
 
+### Variables
 
+- var name type
+- :=

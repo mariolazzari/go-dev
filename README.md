@@ -90,3 +90,8 @@ func main() {
 ### Printing & formatting
 
 - fmt package [docs](https://pkg.go.dev/fmt)
+
+## Arrays, slices and iterations
+
+### Arrays and slices
+

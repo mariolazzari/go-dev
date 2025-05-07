@@ -75,3 +75,7 @@ func main() {
 
 - var name type
 - :=
+
+### Constants
+
+- const

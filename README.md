@@ -79,3 +79,10 @@ func main() {
 ### Constants
 
 - const
+
+### Naming
+
+- case sensitive
+- conventional
+- very short
+- Uppercase: public

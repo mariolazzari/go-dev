@@ -44,4 +44,31 @@ Go sum file will be generated: ```go go get -u``` will update module.
 
 ### Strings
 
+- Interpreted strings: ""
+- Raw strings: ``
+- UTF-8 support
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	// Interpreted string
+	a := "\nCiao Mariarosa,\n\tcome stai?\n\nMario"
+	fmt.Println(a)
+
+	// Raw string
+	a = `Say "Hello"`
+	fmt.Println(a)
+
+	// Multiline raw string
+	a = `# json string
+	{
+		"key": "value"
+	}`
+	fmt.Println(a)
+}
+```
+
 

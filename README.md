@@ -119,3 +119,22 @@ type Slice struct {
 }
 ```
 
+### Iteration
+
+- for
+- range
+
+```go
+    for i := 0; i < 10; i++ {
+		fmt.Println(i)
+    }
+
+	for i := range 5 {
+		fmt.Println(i)
+	}
+
+    names := [5]string{"John", "Jane", "Doe", "Smith", "Alice"}
+	for i, name := range names {
+		fmt.Printf("Index: %d, Name: %s\n", i, name)
+	}
+```

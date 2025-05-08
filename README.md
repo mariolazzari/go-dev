@@ -138,3 +138,9 @@ type Slice struct {
 		fmt.Printf("Index: %d, Name: %s\n", i, name)
 	}
 ```
+
+## Maps and contrul structures
+
+### Maps
+
+

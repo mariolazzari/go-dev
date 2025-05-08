@@ -95,3 +95,8 @@ func main() {
 
 ### Arrays and slices
 
+|            | Arrays | Slices |
+| ---------- | ------ | ------ |
+| Fixed size | Yes    | No     |
+| Fixed type | Yes    | Yes    |
+| Zero based | Yes    | No     |

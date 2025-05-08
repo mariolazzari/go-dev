@@ -100,3 +100,22 @@ func main() {
 | Fixed size | Yes    | No     |
 | Fixed type | Yes    | Yes    |
 | Zero based | Yes    | No     |
+
+### How slices work
+
+- len [docs](https://pkg.go.dev/builtin#len)
+- cap [docs](https://pkg.go.dev/builtin#cap)
+- make [docs](https://pkg.go.dev/builtin#make)
+- copy [docs](https://pkg.go.dev/builtin#copy)
+
+```go
+type Slice struct {
+	// number of actual elements
+	Length int
+	// maximum number of elements
+	Capacity int
+	// actual array
+	Array []string
+}
+```
+

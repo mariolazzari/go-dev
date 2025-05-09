@@ -198,3 +198,14 @@ Unordered set on key/value pairs.
 
 ```
 
+### If
+
+```go
+    greet := true
+	if greet {
+		println("Hello, World!")
+	} else {
+		println("Goodbye, World!")
+	}
+```
+

@@ -242,3 +242,9 @@ Unordered set on key/value pairs.
 	}
 ```
 
+## Functions
+
+### Arguments and return values
+
+
+

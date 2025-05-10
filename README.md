@@ -413,3 +413,8 @@ func init() {
 	fmt.Println("Init")
 }
 ```
+
+## Structs, methods and pointers
+
+### Structs
+

@@ -7,7 +7,7 @@ type User struct {
 	Age  int
 }
 
-func (u *User) String() {
+func (u User) String() {
 	fmt.Println(u.Name, u.Age)
 }
 

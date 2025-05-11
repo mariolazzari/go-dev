@@ -521,4 +521,12 @@ func main() {
 
 ## Testing
 
-### 
+### Basics
+
+```sh go test```
+
+Go [test](https://pkg.go.dev/testing) must:
+- be in a *_test.go* file.
+- start with prefix *Test*
+- accept *Testing.T* type
+- return no args

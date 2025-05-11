@@ -548,4 +548,14 @@ go test -v -timeout=50ms
 
 ### Coverage
 
+```sh
+go test -cover
+# output
+go test -coverprofile=coverage.out
+# format output
+go tool cover -func=coverage.out
+# html
+go tool cover -html=coverage.out
+```
 
+### 

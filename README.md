@@ -530,3 +530,22 @@ Go [test](https://pkg.go.dev/testing) must:
 - start with prefix *Test*
 - accept *Testing.T* type
 - return no args
+
+### Running tests
+
+```sh
+# run all tests
+go test ./...
+# run one package tests
+go test ./package_name
+# verbose
+go test -v ./... 
+# run in parallel
+go test -v -run=regex
+# run with timeout
+go test -v -timeout=50ms
+```
+
+### Coverage
+
+

@@ -564,4 +564,12 @@ go tool cover -html=coverage.out
 
 ## Interfaces
 
-### 
+### What are inrerfaces?
+
+Collection of methods (not fields):
+- concrete type does not need to know about interfaces
+- you can write interface for existing types
+- you can write interface for third party types
+
+### Empty interface
+

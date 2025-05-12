@@ -608,3 +608,24 @@ func (s *Store) Insert(m Model) error {
 
 IO [package](https://pkg.go.dev/io) includes many interfaces.
 
+### Type assertions
+
+```go
+func WriteNow(i any, s string) error {
+	w, ok := i.(io.Writer)
+	if !ok {
+		return fmt.Errorf("i is not a io.Writer")
+	}
+
+	_, err := fmt.Fprintln(w, s)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+```
+
+## Errors
+
+### Basics

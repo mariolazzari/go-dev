@@ -629,3 +629,23 @@ func WriteNow(i any, s string) error {
 ## Errors
 
 ### Basics
+
+Go treats errors as values.
+
+```go
+func Get(key string) (string, error) {
+	m := map[string]string{
+		"a": "A",
+		"b": "B",
+	}
+
+	if v, ok := m[key]; ok {
+		return v, nil
+	}
+
+	return "", fmt.Errorf("Key not found: %s", key)
+}
+```
+
+### Panics
+

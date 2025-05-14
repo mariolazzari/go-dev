@@ -717,3 +717,8 @@ func (e ErrTableNotFound) Error() string {
 
 - As [method](https://pkg.go.dev/errors#As)
 - Is [method](https://pkg.go.dev/errors#Is)
+
+## Generics
+
+### What is a generic
+

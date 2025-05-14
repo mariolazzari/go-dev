@@ -649,3 +649,47 @@ func Get(key string) (string, error) {
 
 ### Panics
 
+Function with a string argument.
+
+- panic crash application
+- recover from panic ang log error
+- capture panic and return error
+
+- use defer with a recover to catch panic
+- use type assertion for error checking
+- use named return
+- never raise a panic
+
+```go
+package main
+
+func DoSomething(input int) (err error) {
+
+	defer func() {
+		p := recover()
+		if p == nil {
+			return
+		}
+
+		if e, ok := p.(error); ok {
+			err = e
+			return
+		}
+
+		//		err := fmt.Errorf("panit %T %s", p, p)
+	}()
+
+	switch input {
+	case 0:
+		return nil
+	case 1:
+		panic("one")
+	}
+
+	return nil
+}
+
+func main() {
+
+}
+```

@@ -696,3 +696,24 @@ func main() {
 
 ### Custom errors
 
+```go
+type ErrTableNotFound struct {
+	Table      string
+	OccurredAt time.Time
+}
+
+func (e ErrTableNotFound) Error() string {
+	return fmt.Sprintf("%s table not found %s", e.OccurredAt, e.Table)
+}
+```
+
+### Wrapping errors
+
+- [Wrap](https://pkg.go.dev/github.com/pkg/errors#Wrap)
+- [Unwrap](https://pkg.go.dev/github.com/pkg/errors#Unwrap)
+
+
+### Using As and Is
+
+- As [method](https://pkg.go.dev/errors#As)
+- Is [method](https://pkg.go.dev/errors#Is)

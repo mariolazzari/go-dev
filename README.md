@@ -693,3 +693,6 @@ func main() {
 
 }
 ```
+
+### Custom errors
+

@@ -722,3 +722,13 @@ func (e ErrTableNotFound) Error() string {
 
 ### What is a generic
 
+```go
+func keys(m map[any]any) []any {
+	keys := make([]any, 0, len(m))
+	for k := range m {
+		keys = append(keys, k)
+	}
+
+	return keys
+}
+```

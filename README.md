@@ -779,4 +779,16 @@ func Keys[K MapKey, V any](m map[K]V) []K {
 }
 ```
 
+### Generic types
+
+```go
+import "golang.org/x/exp/constraints"
+
+type Store[K constraints.Ordered] struct {
+	items []K
+}
+```
+
+## Channels
+
 ### 

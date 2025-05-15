@@ -732,3 +732,11 @@ func keys(m map[any]any) []any {
 	return keys
 }
 ```
+
+### Type constraints
+
+```go
+func Slicer[T any](input []T) []T {
+	return input
+}
+```

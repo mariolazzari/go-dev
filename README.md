@@ -791,4 +791,8 @@ type Store[K constraints.Ordered] struct {
 
 ## Channels
 
-### 
+### Concurrency
+
+- Concurrency is the composition of indipendetly execution tasks: it is about structure.
+- Parallelism is doing multiple task at once.
+

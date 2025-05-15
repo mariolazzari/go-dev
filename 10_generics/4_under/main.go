@@ -1,7 +1,9 @@
 package main
 
+type MyInit int
+
 type MapKey interface {
-	int | float64
+	~int | float64
 }
 
 func Keys[K MapKey, V any](m map[K]V) []K {

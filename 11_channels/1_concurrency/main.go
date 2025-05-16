@@ -8,6 +8,7 @@ func main() {
 	go func() {
 		fmt.Println("Anonymous func")
 	}()
+
 }
 
 func someFunc() {

@@ -796,5 +796,34 @@ type Store[K constraints.Ordered] struct {
 - Concurrency is the composition of indipendetly execution tasks: it is about structure.
 - Parallelism is doing multiple task at once.
 
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+	go someFunc()
+	go func() {
+		fmt.Println("Anonymous func")
+	}()
+
+}
+
+func someFunc() {
+	fmt.Println("Some func")
+}
+```
+
 ### Channels
+
+- typed
+- synchronous transmissions
+- fifo
+- unbuffered or buffered
+- directional
+
+```go
+
+```
 

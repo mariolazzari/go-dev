@@ -1146,4 +1146,93 @@ func (b *Builder) Build() error {
 
 ## Files
 
-### 
+### Directories
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"os"
+)
+
+func main() {
+	files, err := os.ReadDir("data")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, file := range files {
+		if file.IsDir() {
+			fmt.Println("->", file.Name())
+			continue
+		}
+		fmt.Println(file.Name())
+		info, err := file.Info()
+		if err != nil {
+			log.Println("Error getting file info:", err)
+			continue
+		}
+		fmt.Printf("%+v\n", info)
+	}
+}
+```
+
+### File path helpers
+
+[doc](https://pkg.go.dev/path/filepath)
+
+```go
+package main
+
+import (
+	"fmt"
+	"path/filepath"
+)
+
+func main() {
+	path := filepath.Join("mario", "lazzari")
+	fmt.Println(path)
+}
+```
+
+### Files
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	// read file a.txt
+	data, err := os.ReadFile("a.txt")
+	if err != nil {
+		fmt.Println("Error reading file:", err)
+		return
+	}
+	fmt.Println(string(data))
+
+	// create file b.txt
+	err = os.WriteFile("b.txt", data, 0644)
+	if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	}
+}
+```
+
+### Using file system interface
+
+[docs](https://pkg.go.dev/io/fs)
+
+```go
+
+```
+
+### Embedded files
+
+[docs](https://pkg.go.dev/embed)

@@ -1046,3 +1046,104 @@ func main() {
 	fmt.Println("thumbs done")
 }
 ```
+
+### Errors
+
+```go
+package main
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+func generateThumb(image string, size int) error {
+	if size == 0 {
+		return fmt.Errorf("Invalid size %d", size)
+	}
+
+	thumb := fmt.Sprintf("%s@%dx.png", image, size)
+	fmt.Println("Generate thumb")
+	time.Sleep(time.Microsecond * time.Duration(size))
+	fmt.Println("Generated thumb", thumb)
+	return nil
+}
+
+func main() {
+	const img = "foo.png"
+	var wg sync.WaitGroup
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			if err := generateThumb(img, i+1); err != nil {
+				fmt.Println("Error:", err)
+			}
+		}(i)
+	}
+
+	fmt.Println("Witing for thumbs...")
+	wg.Wait()
+	fmt.Println("thumbs done")
+}
+```
+
+### Locking with mutex
+
+```go
+package main
+
+import "sync"
+
+type Store struct {
+	data map[int]bool
+	mu   sync.Mutex
+}
+
+func (s *Store) Add(i int) {
+	s.mu.Lock()
+	s.data[i] = true
+	s.mu.Unlock()
+}
+
+func (s *Store) Get(i int) bool {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	return s.data[i]
+
+}
+```
+
+### Performing tasks only once
+
+```go
+package main
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+type Builder struct {
+	Built bool
+	once  sync.Once
+}
+
+func (b *Builder) Build() error {
+	b.once.Do(func() {
+		fmt.Println("Building...")
+		time.Sleep(10 * time.Millisecond)
+		fmt.Println("Built")
+		b.Built = true
+	})
+
+	return nil
+}
+
+```
+
+## Files
+
+### 
